@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+
+/* I have used my own font for the webpage. */
+*{
+  font-family: "Inter",sans-serif;
+}
+
+/* this is the pitch component */
+.pitch>div:nth-child(1){
+  font-size: 3.4rem;
+}
+.pitch>div:nth-child(2){
+  font-size:5.5rem;
+  font-weight: bold;
+}
+.pitch>div:nth-child(3){
+  font-size: 2rem;
+  width: 70%;
+}
+/* Apply is used on the Apply now button on the webpage */
+.apply{
+    opacity:1;
+    cursor: default;
+    width: 316px;
+}
+/* Align-all aligns all the components on the webpage to center */
+.align-all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* This is for the font-awesome calendar's color */
+.fa-calendar{
+    color:gray;
+}
+/* shows the prize component of the webpage */
+.pool{
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+/* sets the border between the fund and grant component */
+.fund{
+  border-right: 3px solid transparent;
+  border-image:linear-gradient(white,black,white);
+  border-image-slice: 1;
+
+}
+.pool>div{
+  padding: 10%;
+  width: 100%;
+  text-align:center;
+}
+/* adjusting the fund part of the banner */
+.fund>p:nth-child(odd){
+  font-size: 2.5rem;
+  color: gray;
+}
+.fund>p:nth-child(even){
+  font-size: 9rem;
+  font-weight: 600;
+}
+.fund>svg{
+  margin-top: 3rem;
+}
+/* adjusting th egrant part of the banner */
+.grant>p{
+  font-size: 2.5rem;
+}
+.grant>p:nth-child(2){
+  font-size: 9rem;
+  font-weight: 600;
+}
+.grant>p:last-child{
+  color: gray;
+}
+.grant>p:first-child{
+  padding-top: 3rem;
+}
+/* flexes the mentor panel */
+.mentors{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+}
+/* adjusts the picture of the mentors */
+.program-view-mentor-profile{
+  border-radius: 5%;
+  width: 250px;
+  height: 250px;
+  margin: 3rem;
+}
+.program-view-mentor-profile+h4{
+  font-weight: 500;
+  font-size: 2rem;
+}
+/* sizes the titles */
+.block-title-1,.block-title-2{
+  padding: 2.5rem;
+  text-align: center;
+  color: gray;
+  font-size: 3rem;
+}
+.block-title-2{
+  color: black;
+  text-align: start;
+  font-size: 4.5rem;
+}
+.view-content{
+  justify-content: space-around;
+}
+/* modifies the faq panel */
+.faq>div{
+  margin-left: 2.5rem;
+  color: black;
+  font-size: 2rem;
+  width: 70%;
+}
+/* Adjusts the styling of the date */
+.icon-component-text{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.icon-component-text>p{
+  padding-top: 1rem;
+}
+
+/* for mobiles and tablets */
+@media (max-width:720px){
+  
+  /* changing pitch as per mobiles standards*/
+  .pitch>div:nth-child(1){
+    font-size: 2.9rem;
+  }
+  .pitch>div:nth-child(2){
+    font-size:4.9rem;
+    font-weight: bold;
+  }
+  .pitch>div:nth-child(3){
+    font-size: 1.7rem;
+    width: 100%;
+  }
+  
+  /* trying to wrap prize pool banner */
+  .pool{
+    display:flex;
+    flex-wrap: wrap;
+    border-top:1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  /* adjusting pool border as per mobile standards*/
+  .fund{
+    border-right: 0px;
+    border-bottom: 3px solid transparent;
+    border-image:linear-gradient(90deg,white,black,white);
+    border-image-slice: 1;
+  }
+  /* small tweaks >>> */
+  .program-view-mentor-profile{
+    width: 150px;
+    height: 150px;
+    margin: 1rem;
+  }
+  .apply{
+    width: 100%;
+  }
+  .grant>p:nth-child(2),.fund>p:nth-child(2){
+    font-size: 6rem;
+  }
+  .faq>div{
+    margin-left:1rem;
+    width: 98%;
+    font-size: 1.5rem;
+  }
+  .block-title-2{
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .program-view-mentor-profile+h4{
+    font-size: 1.5rem;
+  }
+}
